@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    /* background-color: lightblue; */
+}
+
+.bg-mypri {
+    /* background-color: #117a8b; */
+    background-color: #1b00ff;
+    /* background-color: transparent; */
+    color: white;
+    /* border-color: #117a8b; */
+    border-color: #1b00ff;
+}
+
+.robo-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.mont-font {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.ex-font {
+    font-family: 'Exo 2', sans-serif;
+}
+
+header {
+    padding-top: 30px !important;
+    width: 100%;
+    height: 100px;
+}
+
+header>div {
+    margin-left: 4vw;
+    margin-right: 10vw;
+}
+
+.middle_container {
+    background: url('./img/pic1.jpg');
+    height: 600px;
+}
+
+.flex {
+    display: flex;
+}
+
+footer {
+    height: 300px;
+}
+
+header, footer {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+footer {
+    position: relative;
+    background-color: #2882db;
+    color: white;
+    padding: 20px;
+}
+
+.contact_btn {
+    background-color: #2167ac !important;
+    color: white !important;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.copy {
+    position: absolute;
+    bottom: 18px;
+}
+
+.go_top {
+    background-color: white !important;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
