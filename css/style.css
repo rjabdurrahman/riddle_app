@@ -38,6 +38,11 @@ header>div {
     margin-right: 10vw;
 }
 
+header img {
+    height: 50px;
+    width: 180px;
+}
+
 .middle_container {
     background: url('./img/pic1.jpg');
     height: 600px;
