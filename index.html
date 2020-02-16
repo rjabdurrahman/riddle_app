@@ -29,10 +29,8 @@
         <img class="mySlides" src="./img/pic3.jpg">
         <img class="mySlides" src="./img/pic4.jpg">
         <div class="w3-center w3-container w3-large w3-text-white w3-display-middle overlay">
-            <div class="w3-display-middle">
-                <h1>This is First Text</h1>
-                <h1>This is Text</h1>
-                <h1>This is Text</h1>
+            <div class="w3-display-middle" style="width: 90%; text-align: center;">
+                <h1 id="serviceTxt" class="ex-font" style="font-size: 80px;"></h1>
             </div>
         </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
@@ -78,11 +76,23 @@
             dots[slideIndex - 1].className += " w3-white";
         }
 
+        // Middle text
+        let no = 0;
+        let middleTextArr = ['We Provide Best Services on Cloud', 'This is Another Message', 'I am message 2']
+        mountTxt(no)
+        function mountTxt(serial) {
+            if (serial > 2) {
+                serial = 0;
+                no = 0;
+            };
+            document.getElementById('serviceTxt').innerHTML = middleTextArr[serial];
+        }
+
         setInterval(function () {
             plusDivs(1);
+            mountTxt(++no);
         }, 2000)
     </script>
-
 </body>
 
 </html>
