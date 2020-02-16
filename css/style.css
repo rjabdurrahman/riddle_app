@@ -44,11 +44,6 @@ header img {
     width: 180px;
 }
 
-.middle_container {
-    background: url('./img/pic1.jpg');
-    height: 600px;
-}
-
 .flex {
     display: flex;
 }

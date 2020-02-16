@@ -13,11 +13,7 @@
         height: 40px;
         width: 140px;
     }
-    .middle_container {
-        background: url('./img/pic1.jpg');
-        height: 400px;
-    }
-    .mySlides {
+    #slidImg {
         width: 100%;
         height: 350px;
     }
