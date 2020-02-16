@@ -13,28 +13,32 @@
         height: 40px;
         width: 140px;
     }
+    .img-container {
+        height: 350px;
+    }
     #slidImg {
         width: 100%;
         height: 350px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
-    #serviceTxt {
-        font-size: 40px;
+    #serviceTxt h1 {
+        font-size: 2.5rem;
     }
-
+    #serviceTxt h2 {
+        font-size: 1.5rem;
+    }
     .contact_us {
         padding: 0;
     }
-    
     .contact_us form {
         width: 100%;
     }
-
-    .contact_us form .w3-xxlarge{
+    .contact_us form .w3-xxlarge {
         font-size: 20px !important;
         margin-top: 6px;
         box-sizing: border-box;
     }
-
     .contact_us form .w3-col {
         width: 25px !important;
     }
