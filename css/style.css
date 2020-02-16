@@ -100,6 +100,8 @@ footer {
 #slidImg {
     width: 100%;
     height: 600px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .overlay {
