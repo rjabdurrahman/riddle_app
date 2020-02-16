@@ -1,5 +1,6 @@
 @media only screen and (max-width: 920px) {
     header {
+        box-shadow: 4px 4px 4px 2px lightgrey;
         padding-top: 20px !important;
         width: 100%;
         height: 75px;
@@ -12,29 +13,24 @@
         height: 40px;
         width: 140px;
     }
-
     .middle_container {
         background: url('./img/pic1.jpg');
         height: 400px;
     }
-
     .mySlides {
         width: 100%;
         height: 350px;
     }
-
     #serviceTxt {
         font-size: 40px;
     }
 }
 
 @media only screen and (max-width: 360px) {
-
     .mySlides {
         width: 100%;
         height: 300px;
     }
-
     #serviceTxt {
         font-size: 35px;
     }
