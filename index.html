@@ -35,8 +35,8 @@
         </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
             style="width:100%">
-            <div class="arrow w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-            <div class="arrow w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <div class="arrow w3-left w3-hover-text-khaki" onclick="showDivs(--slideIndex);mountTxt(--no);">&#10094;</div>
+            <div class="arrow w3-right w3-hover-text-khaki" onclick="showDivs(++slideIndex);mountTxt(++no);">&#10095;</div>
             <div onclick="control(event)" class="arrow-con w3-center w3-hover-text-khaki" onclick="plusDivs(1)">
                 <i class="fa fa-play" style="overflow: hidden;" aria-hidden="true"></i>
             </div>
@@ -57,8 +57,11 @@
                 slideIndex = 0;
                 n = 0;
             }
+            if(n < 0) {
+                slideIndex = 2;
+                n = 2;
+            }
             var bgEl = document.getElementById('slidImg');
-            console.log(bgEl)
             bgEl.style.backgroundImage = 'url(./img/' + imgs[n] + ')';
         }
 
@@ -70,6 +73,10 @@
             if (serial > 2) {
                 serial = 0;
                 no = 0;
+            }
+            if (serial < 0) {
+                serial = 2;
+                no = 2;
             };
             document.getElementById('serviceTxt').innerHTML = middleTextArr[serial];
         }
