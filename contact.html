@@ -27,33 +27,34 @@
         </div>
     </header>
     <div class="contact_us">
-        <form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue">
+        <form onsubmit="sendMail(event)" class="w3-container w3-card-4 w3-light-grey w3-text-blue">
             <h2 class="w3-center">Contact Us</h2>
 
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" name="email" type="text" placeholder="Email Address">
+                    <input class="w3-input w3-border" name="email" type="email" placeholder="Email Address" required>
                 </div>
             </div>
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" name="subject" type="text" placeholder="Subject">
+                    <input class="w3-input w3-border" name="subject" type="text" placeholder="Subject" required>
                 </div>
             </div>
 
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
                 <div class="w3-rest">
-                    <input class="w3-input w3-border" name="contact" type="text" placeholder="Contact Number">
+                    <input class="w3-input w3-border" name="contact" type="phone" placeholder="Contact Number" required>
                 </div>
             </div>
 
             <div class="w3-row w3-section">
                 <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
                 <div class="w3-rest">
-                    <textarea class="w3-input w3-border" rows="10" name="message" placeholder="Message"></textarea>
+                    <textarea class="w3-input w3-border" rows="10" name="message" placeholder="Message"
+                        required></textarea>
                 </div>
             </div>
 
@@ -69,5 +70,34 @@
         </a>
     </footer>
 </body>
+<script>
+    // Send Mail
+    function sendMail(e) {
+        e.preventDefault();
+        let { email, subject, contact, message } = e.target.elements;
+        let data = {
+            email: email.value,
+            sub: subject.value,
+            cont: contact.value,
+            msg: message.value
+        }
+        console.log(data)
+        fetch('https://example.com/profile', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        return false;
+    }
+</script>
 
 </html>
