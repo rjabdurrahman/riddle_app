@@ -31,7 +31,7 @@
         <img class="mySlides" src="./img/noc.jpg">
         <div class="w3-center w3-container w3-large w3-text-white w3-display-middle overlay">
             <div class="w3-display-middle" style="width: 100%; text-align: center;">
-                <h1 id="serviceTxt" class="ex-font"></h1>
+                <div id="serviceTxt"></div>
             </div>
         </div>
         <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
@@ -79,7 +79,7 @@
 
         // Middle text
         let no = 0;
-        let middleTextArr = ['We Provide Best Services on Internet', 'Mastering on Cloud Provider', 'Boost Your IT Organization or Individual']
+        let middleTextArr = ['<h1>We Provide Best Services on Internet</h1><h2>Our pirces are unbeatable. Our cloud services right on dedicated bandwith.</h2>', '<h1>Mastering on Cloud Provider</h1>', '<h1>Boost Your IT Organization or Individual</h1>']
         mountTxt(no)
         function mountTxt(serial) {
             if (serial > 2) {

@@ -103,8 +103,12 @@ footer {
     height: 100%;
 }
 
-#serviceTxt {
-    font-size: 80px;
+#serviceTxt h1 {
+    font-size: 70px;
+}
+
+#serviceTxt h2 {
+    font-size: 40px;
 }
 
 .contact_us {
