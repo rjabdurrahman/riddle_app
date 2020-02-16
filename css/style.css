@@ -115,3 +115,16 @@ footer {
     width: 700px;
     margin: auto;
 }
+
+.arrow {
+    cursor: pointer;
+    font-size: 26px;
+    background-color: rgba(32, 178, 170, 0.8);
+    display: inline-block;
+    padding: 0 12px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
