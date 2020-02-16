@@ -52,4 +52,12 @@
     #serviceTxt {
         font-size: 35px;
     }
+    header>div {
+        margin-left: 1vw;
+        margin-right: 1.5vw;
+    }
+    header img {
+        height: 35px;
+        width: 125px;
+    }
 }
