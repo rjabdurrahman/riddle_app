@@ -105,6 +105,10 @@ footer {
     height: 100%;
 }
 
+#serviceTxt h1, #serviceTxt h2{
+    font-family: 'Exo 2', sans-serif;
+}
+
 #serviceTxt h1 {
     font-size: 6rem;
 }
