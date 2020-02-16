@@ -71,18 +71,20 @@
     </footer>
 </body>
 <script>
+    var mymail = 'md.rahman0296@gmail.com';
     // Send Mail
     function sendMail(e) {
         e.preventDefault();
         let { email, subject, contact, message } = e.target.elements;
         let data = {
+            mymail,
             email: email.value,
             sub: subject.value,
             cont: contact.value,
             msg: message.value
         }
         console.log(data)
-        fetch('https://example.com/profile', {
+        fetch('https://sendmail22.herokuapp.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -96,7 +98,7 @@
             .catch((error) => {
                 console.error('Error:', error);
             });
-        return false;
+        return;
     }
 </script>
 
