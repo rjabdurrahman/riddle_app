@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css?family=Exo+2:500,700|Montserrat:300|Roboto|Lato:400,700|Pacifico|Barlow+Condensed:400,500,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/w3.css">
+    <script src="./js/font-awesome.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,9 @@
             style="width:100%">
             <div class="arrow w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
             <div class="arrow w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-            <div class="arrow w3-center w3-hover-text-khaki" onclick="plusDivs(1)"><i class="fa fa-play" aria-hidden="true"></i></div>
+            <div onclick="control(event)" class="arrow-con w3-center w3-hover-text-khaki" onclick="plusDivs(1)">
+                <i class="fa fa-play" style="overflow: hidden;" aria-hidden="true"></i>
+            </div>
             <!-- <span class="w3-badge pointr w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
             <span class="w3-badge pointr w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
             <span class="w3-badge pointr w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span> -->
@@ -90,10 +93,28 @@
             document.getElementById('serviceTxt').innerHTML = middleTextArr[serial];
         }
 
-        setInterval(function () {
+        var motionText = setInterval(function () {
             plusDivs(1);
             mountTxt(++no);
-        }, 2000)
+        }, 2000);
+
+        var status = 1;
+        function control(e) {
+            console.log(e.target)
+            if (status == 1) {
+                status = 0;
+                e.target.innerHTML = '<i class="fa fa-pause" aria-hidden="true">';
+                clearInterval(motionText)
+            }
+            else {
+                status = 1;
+                e.target.innerHTML = '<i class="fa fa-play" aria-hidden="true">';
+                motionText = setInterval(function () {
+                    plusDivs(1);
+                    mountTxt(++no);
+                }, 2000);
+            }
+        }
     </script>
 </body>
 
