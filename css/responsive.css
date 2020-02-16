@@ -53,8 +53,8 @@
         font-size: 35px;
     }
     header>div {
-        margin-left: 1vw;
-        margin-right: 1.5vw;
+        margin-left: 0;
+        margin-right: 0;
     }
     header img {
         height: 35px;
