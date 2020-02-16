@@ -24,6 +24,24 @@
     #serviceTxt {
         font-size: 40px;
     }
+
+    .contact_us {
+        padding: 0;
+    }
+    
+    .contact_us form {
+        width: 100%;
+    }
+
+    .contact_us form .w3-xxlarge{
+        font-size: 20px !important;
+        margin-top: 6px;
+        box-sizing: border-box;
+    }
+
+    .contact_us form .w3-col {
+        width: 25px !important;
+    }
 }
 
 @media only screen and (max-width: 360px) {

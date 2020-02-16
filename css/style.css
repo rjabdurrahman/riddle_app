@@ -106,3 +106,12 @@ footer {
 #serviceTxt {
     font-size: 80px;
 }
+
+.contact_us {
+    padding: 30px 10px;
+}
+
+.contact_us form {
+    width: 700px;
+    margin: auto;
+}
