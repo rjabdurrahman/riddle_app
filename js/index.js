@@ -9,7 +9,7 @@ function showDivs (n) {
     slideIndex = 2
     n = 2
   }
-  var bgEl = document.getElementById('slidImg');
+  var bgEl = document.getElementById('slidImg')
   bgEl.style.backgroundImage = 'url(./img/' + imgs[n] + ')'
 }
 
@@ -57,12 +57,18 @@ function movementSlide (t) {
     showDivs(++slideIndex)
     mountTxt(++no)
     clearInterval(motionText)
+    if (status == 0) {
+      return
+    }
     move()
   }
   if (t == -1) {
     showDivs(--slideIndex)
     mountTxt(--no)
     clearInterval(motionText)
+    if (status == 0) {
+      return
+    }
     move()
   }
 }

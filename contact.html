@@ -18,10 +18,10 @@
     <header id="top">
         <div class="flex" style="justify-content: space-between;">
             <div>
-                <img src="./img/brand.png" alt="Company">
+                <img src="/img/brand.png" alt="Company">
             </div>
             <div>
-                <a href="/" class="w3-btn mont-font contact_btn">Home</a>
+                <a href="/index.html" class="w3-btn mont-font contact_btn">Home</a>
                 <a href="/contact.html" class="w3-btn mont-font contact_btn">Services</a>
             </div>
         </div>
@@ -89,10 +89,10 @@
         }
         notifyEl.textContent = 'Sending...';
         notifyEl.style.display = 'block';
+        console.log(`https://sendmail22.herokuapp.com/send?email=${data.email}&sub=${data.sub}&cont=${data.cont}&msg=${data.msg}&mymail=${mymail}`)
         fetch(`https://sendmail22.herokuapp.com/send?email=${data.email}&sub=${data.sub}&cont=${data.cont}&msg=${data.msg}&mymail=${mymail}`)
             .then((response) => response.json())
             .then((data) => {
-                console.log(`https://sendmail22.herokuapp.com/send?email=${data.email}&sub=${data.sub}&cont=${data.cont}&msg=${data.msg}&mymail=${mymail}`)
                 notifyEl.textContent = 'Send Sucessfully!';
                 email.value = '';
                 subject.value = '';
