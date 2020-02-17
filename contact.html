@@ -74,7 +74,7 @@
     </footer>
 </body>
 <script>
-    var mymail = 'yourmail address';
+    var mymail = 'md.rahman0296@gmail.com';
     var notifyEl = document.getElementById('notify');
     // Send Mail
     function sendMail(e) {
@@ -87,17 +87,18 @@
             cont: contact.value,
             msg: message.value
         }
-        notifyEl.innerHTML = 'Sending...';
+        notifyEl.textContent = 'Sending...';
         notifyEl.style.display = 'block';
         fetch(`https://sendmail22.herokuapp.com/send?email=${data.email}&sub=${data.sub}&cont=${data.cont}&msg=${data.msg}&mymail=${mymail}`)
             .then((response) => response.json())
             .then((data) => {
+                console.log(`https://sendmail22.herokuapp.com/send?email=${data.email}&sub=${data.sub}&cont=${data.cont}&msg=${data.msg}&mymail=${mymail}`)
+                notifyEl.textContent = 'Send Sucessfully!';
                 email.value = '';
                 subject.value = '';
                 contact.value = '';
                 message.value = '';
                 setTimeout(function () {
-                    notifyEl.innerHTML = 'Send Sucessfully!';
                     notifyEl.style.display = 'none';
                 }, 1500);
             })

@@ -1,0 +1,12 @@
+// Slider
+1. Upload Image on 'img' folder
+2. Go to index.html line no 54
+var imgs = [.........]
+changes the name of images
+
+3. Go to line no 55 and chage the titles
+
+// Contact Email
+1. Go to contact.html page
+
+change line 77 var mymail = 'yourmail address'
